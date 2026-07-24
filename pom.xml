@@ -227,15 +227,30 @@
     <module>s2-dao-s24-test</module>
   </modules>
   <repositories>
+    <!-- Maven Central เป็นหลัก -->
     <repository>
-      <id>maven.seasar.org</id>
+      <id>central</id>
+      <name>Maven Central</name>
+      <url>https://repo1.maven.org/maven2/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    
+    <!-- Seasar ไว้เป็น secondary (ถ้าจำเป็น) -->
+    <repository>
+      <id>seasar</id>
       <name>The Seasar Foundation Maven2 Repository</name>
       <url>https://maven.seasar.org/maven2</url>
-    </repository>
-    <repository>
-      <id>maven.snapshot.seasar.org</id>
-      <name>The Seasar Foundation Maven2 Repository(snapshot)</name>
-      <url>https://maven.seasar.org/maven2-snapshot/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
     </repository>
   </repositories>
   <pluginRepositories>

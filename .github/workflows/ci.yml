@@ -39,10 +39,10 @@ jobs:
           <settings>
             <mirrors>
               <mirror>
-                <id>seasar-https-mirror</id>
-                <mirrorOf>maven.seasar.org,seasar,seasar-repository</mirrorOf>
-                <name>Seasar HTTPS Mirror</name>
-                <url>https://maven.seasar.org/maven2</url>
+                <id>central-mirror</id>
+                <mirrorOf>central</mirrorOf>
+                <name>Maven Central Mirror</name>
+                <url>https://repo1.maven.org/maven2/</url>
               </mirror>
             </mirrors>
           </settings>
@@ -54,6 +54,8 @@ jobs:
           -s ~/.m2/settings.xml
           -Dmaven.compiler.source=1.8
           -Dmaven.compiler.target=1.8
+          -Dmaven.wagon.http.retryHandler.count=5
+          -Dmaven.wagon.httpconnectionManager.ttlSeconds=180
 
       - name: Upload JAR Artifacts
         uses: actions/upload-artifact@v4
