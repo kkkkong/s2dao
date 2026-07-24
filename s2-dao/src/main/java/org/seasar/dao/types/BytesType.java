@@ -87,6 +87,15 @@ public class BytesType extends AbstractValueType {
         }
     }
 
+    /**
+     * @param o
+     * @return
+     */
+    @Override
+    public String toText(Object o) {
+        return "";
+    }
+
     public Object getValue(final ResultSet resultSet, final int index)
             throws SQLException {
         return trait.get(resultSet, index);
