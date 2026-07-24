@@ -11,7 +11,7 @@
   <name>S2Dao Project</name>
   <version>1.0.52-SNAPSHOT</version>
   <description></description>
-  <url>http://s2dao.seasar.org/</url>
+  <url>https://s2dao.seasar.org/</url>
   <issueManagement>
     <system>JIRA</system>
     <url><![CDATA[https://www.seasar.org/issues/browse/DAO]]></url>
@@ -23,28 +23,28 @@
       <subscribe>https://www.seasar.org/mailman/listinfo/seasar-user</subscribe>
       <unsubscribe>https://www.seasar.org/mailman/listinfo/seasar-user</unsubscribe>
       <post>seasar-user@ml.seasar.org</post>
-      <archive>http://ml.seasar.org/archives/seasar-user</archive>
+      <archive>https://ml.seasar.org/archives/seasar-user</archive>
     </mailingList>
     <mailingList>
       <name>Seasar-dev</name>
       <subscribe>https://www.seasar.org/mailman/listinfo/seasar-dev</subscribe>
       <unsubscribe>https://www.seasar.org/mailman/listinfo/seasar-dev</unsubscribe>
       <post>seasar-dev@ml.seasar.org</post>
-      <archive>http://ml.seasar.org/archives/seasar-dev</archive>
+      <archive>https://ml.seasar.org/archives/seasar-dev</archive>
     </mailingList>
     <mailingList>
       <name>Seasar-user-en</name>
       <subscribe>https://www.seasar.org/mailman/listinfo/seasar-user-en</subscribe>
       <unsubscribe>https://www.seasar.org/mailman/listinfo/seasar-user-en</unsubscribe>
       <post>seasar-user-en@ml.seasar.org</post>
-      <archive>http://ml.seasar.org/archives/seasar-user-en/</archive>
+      <archive>https://ml.seasar.org/archives/seasar-user-en/</archive>
     </mailingList>
     <mailingList>
       <name>seasar-s2dao-dev</name>
       <subscribe>https://www.seasar.org/mailman/listinfo/seasar-s2dao-dev</subscribe>
       <unsubscribe>https://www.seasar.org/mailman/listinfo/seasar-s2dao-dev</unsubscribe>
       <post>seasar-s2dao-dev@ml.seasar.org</post>
-      <archive>http://ml.seasar.org/archives/seasar-s2dao-dev</archive>
+      <archive>https://ml.seasar.org/archives/seasar-s2dao-dev</archive>
     </mailingList>
   </mailingLists>
   <developers>
@@ -132,18 +132,18 @@
   <licenses>
     <license>
       <name>The Apache Software License, Version 2.0</name>
-      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
       <distribution>repo</distribution>
     </license>
   </licenses>
   <scm>
     <connection>scm:svn:https://www.seasar.org/svn/s2dao/branches/s2dao-1.0.x/</connection>
     <developerConnection>scm:svn:https://www.seasar.org/svn/s2dao/branches/s2dao-1.0.x/</developerConnection>
-    <url>http://svn.seasar.org/browse/branches/?root=s2dao</url>
+    <url>https://svn.seasar.org/browse/branches/?root=s2dao</url>
   </scm>
   <organization>
     <name>The Seasar Foundation</name>
-    <url>http://www.seasar.org/</url>
+    <url>https://www.seasar.org/</url>
   </organization>
   <build>
     <defaultGoal>validate</defaultGoal>
@@ -152,8 +152,8 @@
         <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
           <configuration>
-            <source>1.4</source>
-            <target>1.4</target>
+            <source>1.8</source>
+            <target>1.8</target>
             <encoding>UTF-8</encoding>
           </configuration>
         </plugin>
@@ -200,13 +200,13 @@
         <artifactId>maven-license-plugin</artifactId>
         <version>1.4.0</version>
         <configuration>
-          <header>http://www.seasar.org/license/header.txt</header>
+          <header>https://www.seasar.org/license/header.txt</header>
           <includes>
             <include>src/**/*.java</include>
           </includes>
           <encoding>UTF-8</encoding>
           <headerDefinitions>
-            <headerDefinition>http://www.seasar.org/license/header-definition.xml</headerDefinition>
+            <headerDefinition>https://www.seasar.org/license/header-definition.xml</headerDefinition>
           </headerDefinitions>
         </configuration>
       </plugin>
@@ -228,12 +228,12 @@
     <repository>
       <id>maven.seasar.org</id>
       <name>The Seasar Foundation Maven2 Repository</name>
-      <url>http://maven.seasar.org/maven2</url>
+      <url>https://maven.seasar.org/maven2</url>
     </repository>
     <repository>
       <id>maven.snapshot.seasar.org</id>
       <name>The Seasar Foundation Maven2 Repository(snapshot)</name>
-      <url>http://maven.seasar.org/maven2-snapshot/</url>
+      <url>https://maven.seasar.org/maven2-snapshot/</url>
     </repository>
   </repositories>
   <pluginRepositories>
@@ -251,7 +251,7 @@
     -->
     <pluginRepository>
       <id>snapshots.repository.codehaus.org</id>
-      <url>http://snapshots.repository.codehaus.org</url>
+      <url>https://snapshots.repository.codehaus.org</url>
       <snapshots>
         <enabled>true</enabled>
       </snapshots>
@@ -347,4 +347,8 @@
       <url>dav:https://www.seasar.org/maven/maven2-snapshot</url>
     </snapshotRepository>
   </distributionManagement>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+  </properties>
 </project>

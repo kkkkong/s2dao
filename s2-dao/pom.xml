@@ -12,7 +12,7 @@
   <artifactId>s2-dao</artifactId>
   <packaging>jar</packaging>
   <name>S2Dao</name>
-  <url>http://s2dao.seasar.org/</url>
+  <url>https://s2dao.seasar.org/</url>
   <build>
     <plugins>
       <plugin>
