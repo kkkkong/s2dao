@@ -31,7 +31,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
 
-      # แก้ปัญหา HTTP/HTTPS ของ maven.seasar.org ผ่าน settings.xml
+      # กำหนด Mirror เฉพาะ Repo ของ Seasar เท่านั้น (ไม่ใช้ * แล้ว)
       - name: Create Maven settings.xml
         run: |
           mkdir -p ~/.m2
@@ -40,7 +40,7 @@ jobs:
             <mirrors>
               <mirror>
                 <id>seasar-https-mirror</id>
-                <mirrorOf>*</mirrorOf>
+                <mirrorOf>maven.seasar.org,seasar,seasar-repository</mirrorOf>
                 <name>Seasar HTTPS Mirror</name>
                 <url>https://maven.seasar.org/maven2</url>
               </mirror>
@@ -48,7 +48,6 @@ jobs:
           </settings>
           EOF
 
-      # รัน Build, Run Tests และ Package เป็น Jar ในคำสั่งเดียว
       - name: Build and Test S2Dao
         run: >
           mvn clean package -B -V -e
@@ -56,7 +55,6 @@ jobs:
           -Dmaven.compiler.source=1.8
           -Dmaven.compiler.target=1.8
 
-      # เก็บไฟล์ .jar ขึ้น GitHub Artifacts
       - name: Upload JAR Artifacts
         uses: actions/upload-artifact@v4
         with:
