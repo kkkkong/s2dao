@@ -22,7 +22,7 @@
             <id>prepare-test-jar</id>
             <phase>package</phase>
             <configuration>
-              <tasks>
+              <target>
                 <copy todir="${project.build.directory}/test-jar-staging">
                   <fileset dir="${project.build.testOutputDirectory}">
                     <exclude name="**/*.dicon"/>
@@ -32,7 +32,7 @@
                     <exclude name="data-h2/**"/>
                   </fileset>
                 </copy>
-              </tasks>
+              </target>
             </configuration>
             <goals>
               <goal>run</goal>
